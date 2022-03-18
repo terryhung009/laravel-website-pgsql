@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-// $DATABASE_URL = parse_url('postgres://cqphijtqbngeoz:88ddbded0a8e62bbd4f72d1302f6ff7459d8b76a7911edb5a41bd7a132bf8944@ec2-3-227-195-74.compute-1.amazonaws.com:5432/dbj4lvptscllbk');
+$DATABASE_URL = parse_url('postgres://lxnoojjbbnluhd:bad982c32d36a18e818f2905f8707dd466d1964e5b276e2e33c43a04a0b272b7@ec2-18-210-191-5.compute-1.amazonaws.com:5432/d6800351aqh0sk');
 
 return [
 
@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,11 +48,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'us-cdbr-east-05.cleardb.net'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'heroku_d973656ddeafdaf'),
-            'username' => env('DB_USERNAME', 'b95cdb302fa1e4'),
-            'password' => env('DB_PASSWORD', '65ab1614'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', 'forge'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
